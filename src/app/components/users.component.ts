@@ -5,14 +5,24 @@ import { HttpService} from '../services/http.service';
 @Component({
     selector: 'users-app',
     template:  `<div>{{error}}</div>
-    <ul>
-        <li *ngFor="let user of users">
-            <a [routerLink]="['chat']" [queryParams]="{'uid':user.uid}">
-                {{user.name}}; ({{user.messages}})
-            </a>
-        </li>
-    </ul>
-    
+    <div class="container">
+        <div class="row">
+            <div class="col">
+            </div>
+            <div class="col">
+                <ol class="list-group list-group-numbered">
+                    <li class="list-group-item d-flex justify-content-between align-items-start" *ngFor="let user of users">
+                        <div class="ms-2 me-auto">
+                            <a class="link-dark" [routerLink]="['chat']" [queryParams]="{'uid':user.uid}">{{user.name}}</a>
+                        </div>
+                        <span class="badge bg-primary rounded-pill">{{user.messages}}</span>
+                    </li>
+                </ol>
+            </div>
+            <div class="col">
+            </div>
+        </div>
+    </div>
     `,
     providers: [HttpService]
 })

@@ -1,0 +1,32 @@
+<div class="container content">
+    <div class="row">
+        <div class="col"></div>
+        <div class="col">
+            <div>{{error}}</div>
+            <a class="btn btn-info" role="button" [routerLink]="['/']" >back</a>
+            <h3 class="display-5 fw-bold text-center">viber chat</h3>
+            <div class="card">
+                <div class="card-body height3">
+                    <ul class="chat-list">
+                        <li *ngFor="let message of messages" [class.in]=message.question [class.out]=!message.question>
+                            <div class="chat-img" *ngIf="message.question">
+                                <img alt="Avtar" src="https://bootdey.com/img/Content/avatar/avatar6.png" >
+                            </div>
+                            <div class="chat-img" *ngIf="!message.question">
+                                <img alt="Avtar" src="https://www.bootdey.com/img/Content/avatar/avatar5.png" >
+                            </div>
+                            <div class="chat-body">
+                                <div class="chat-message">
+                                    <p *ngIf="message.question"><strong>{{message.name}}</strong>&nbsp;&nbsp;<time>{{message.when}}</time></p>
+                                    <p *ngIf="!message.question"><time>{{message.when}}</time>&nbsp;&nbsp;<strong>{{message.name}}</strong></p>
+                                    <p>{{message.data}}</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col"></div>
+    </div>
+</div>

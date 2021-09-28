@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row">
+        <div class="col"></div>
+        <div class="col">
+            <div>{{error}}</div>
+            <h3 class="display-5 fw-bold text-center">viber users</h3>
+            <ol class="list-group list-group-numbered">
+                <li class="list-group-item d-flex justify-content-between align-items-start" *ngFor="let user of users">
+                    <div class="ms-2 me-auto">
+                        <a class="link-dark" [routerLink]="['chat']" [queryParams]="{'uid':user.uid}">{{user.name}}</a>
+                    </div>
+                    <span class="badge bg-primary rounded-pill">{{user.messages}}</span>
+                </li>
+            </ol>
+        </div>
+        <div class="col"></div>
+    </div>
+</div>

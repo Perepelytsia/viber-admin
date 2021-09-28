@@ -4,9 +4,9 @@ import { FormsModule }   from '@angular/forms';
 import { HttpClientModule }   from '@angular/common/http';
 import {Routes, RouterModule} from '@angular/router';
 import { AppComponent }   from './app.component';
-import { UsersComponent }   from './components/users.component';
-import { NotFoundComponent }   from './components/not-found.componen';
-import { ChatComponent }   from './components/chat.component'
+import { UsersComponent }   from './components/users/users.component';
+import { NotFoundComponent }   from './components/not-found/not-found.componen';
+import { ChatComponent }   from './components/chat/chat.component'
 
 // определение маршрутов
 const appRoutes: Routes =[

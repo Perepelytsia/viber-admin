@@ -1,8 +1,8 @@
 {
-  "name": "purchaseapp",
+  "name": "viber-admin",
   "version": "1.0.0",
-  "description": "First Angular 12 Project",
-  "author": "Eugene Popov metanit.com",
+  "description": "viber-admin",
+  "author": "Perepelytsia",
   "scripts": {
     "ng": "ng",
     "start": "node server.js",

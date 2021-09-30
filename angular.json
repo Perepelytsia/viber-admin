@@ -1,7 +1,7 @@
 {
   "version": 1,
   "projects": {
-    "purchaseapp": {
+    "viber-admin": {
       "projectType": "application",
       "root": "",
       "sourceRoot": "src",
@@ -9,7 +9,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/purchaseapp",
+            "outputPath": "dist/viber-admin",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -17,15 +17,35 @@
             "assets": ["src/assets"],
             "styles": ["src/style.css"],
             "aot": true
+          },
+          "configurations": {
+            "dev": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.dev.ts"
+                }
+              ]
+
+            },
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "sourceMap": false
+            }
           }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "purchaseapp:build"
+            "browserTarget": "viber-admin:build"
           }
         }
       }
     }},
-  "defaultProject": "purchaseapp"
+  "defaultProject": "viber-admin"
 }
